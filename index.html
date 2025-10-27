@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>طراحی سایت حرفه‌ای با ZiziWeb | نسخه B</title>
+  <meta name="description" content="طراحی سایت مینیمال، واکنش‌گرا و افکت‌دار با ZiziWeb توسط ایگین. سفارش آنلاین پروژه‌های شخصی و فروشگاهی.">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+    .main-menu {
+      background-color: #fff0f5;
+      border-bottom: 2px solid #ff3399;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .main-menu ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .main-menu a {
+      text-decoration: none;
+      color: #333;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .main-menu a:hover {
+      color: #ff3399;
+      border-bottom: 2px solid #ff3399;
+    }
+
+    .hero-image {
+      height: 80vh;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+
+    .intro-video {
+      text-align: center;
+      padding: 30px 10px;
+    }
+    .intro-video video {
+      width: 90%;
+      max-width: 600px;
+      border: 3px solid #ff3399;
+      border-radius: 10px;
+    }
+    .video-caption {
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .services {
+      padding: 40px 20px;
+      background-color: #fff0f5;
+    }
+    .services h2 {
+      text-align: center;
+      color: #ff3399;
+    }
+    .service {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .service button {
+      width: 100%;
+      background-color: #ff3399;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .detail-box {
+      display: none;
+      background-color: #ffe6f0;
+      border: 1px solid #ff3399;
+      padding: 15px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+    .order-btn {
+      background-color: #ff3399;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .order-btn:hover {
+      background-color: #e60073;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="main-menu">
+  <ul>
+    <li><a href="index.html">خانه</a></li>
+    <li><a href="about.html">درباره ما</a></li>
+    <li><a href="blog.html">وبلاگ</a></li>
+    <li><a href="portfolio.html">نمونه‌کارها</a></li>
+    <li><a href="services.html">خدمات</a></li>
+    <li><a href="contact.html">تماس با ما</a></li>
+  </ul>
+</nav>
+
+  <header class="hero-image">
+    <img src="hero.jpeg" alt="تصویر اصلی ZiziWeb با شخصیت برجسته" />
+  </header>
+
+  <section class="intro-video">
+    <video controls>
+      <source src="intro.mp4" type="video/mp4" />
+      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+    </video>
+    <p class="video-caption">با ZiziWeb، طراحی سایت حرفه‌ای و خاص رو تجربه کن!</p>
+  </section>
+
+  <section class="services">
+    <h2>خدمات قابل ارائه</h2>
+
+    <div class="service">
+      <button onclick="toggleDetail('personal')">طراحی سایت شخصی</button>
+      <div id="personal" class="detail-box">
+        <p>ساخت سایت‌های ساده و شیک برای معرفی فردی، رزومه، یا نمونه‌کارها با طراحی مینیمال و واکنش‌گرا</p>
+        <button class="order-btn">سفارش</button>
+      </div>
+    </div>
+
+    <div class="service">
+      <button onclick="toggleDetail('shop')">طراحی سایت فروشگاهی</button>
+      <div id="shop" class="detail-box">
+        <p>طراحی فروشگاه آنلاین با قابلیت نمایش محصولات، سبد خرید، پرداخت آنلاین و مدیریت سفارش‌ها</p>
+        <button class="order-btn">سفارش</button>
+      </div>
+    </div>
+
+    <div class="service">
+      <button onclick="toggleDetail('seo')">بهینه‌سازی سئو داخلی سایت</button>
+      <div id="seo" class="detail-box">
+        <p>تنظیم ساختار صفحات، تگ‌ها، لینک‌ها و سرعت بارگذاری برای بهتر دیده‌شدن در گوگل با محوریت ZiziWeb</p>
+        <button class="order-btn">سفارش</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const image = document.querySelector(".hero-image img");
+      const scrollY = window.scrollY;
+      image.style.opacity = Math.max(1 - scrollY / 300, 0);
+    });
+
+    function toggleDetail(id) {
+      const box = document.getElementById(id);
+      const isVisible = box.style.display === "block";
+      document.querySelectorAll(".detail-box").forEach(el => el.style.display = "none");
+      if (!isVisible) {
+        box.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>

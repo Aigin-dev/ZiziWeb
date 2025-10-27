@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تماس با ما | ZiziWeb</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazir', sans-serif;
+      background-color: #ffeef4;
+      color: #cc3366;
+    }
+
+    .main-menu {
+      background-color: #ffeef4;
+      border-bottom: 1px solid #f8c2d4;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .main-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    .main-menu li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .main-menu a {
+      text-decoration: none;
+      color: #cc3366;
+      font-weight: 500;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .main-menu a:hover {
+      border-bottom: 2px solid #ff0066;
+    }
+
+    .main-menu a.active {
+      border-bottom: 2px solid #ff0066;
+      color: #cc3366;
+    }
+
+    .contact-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ff0066;
+    }
+
+    form {
+      background-color: #fff;
+      border: 1px solid #f8c2d4;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(255, 0, 102, 0.1);
+      text-align: right;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #f8c2d4;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: 'Vazir', sans-serif;
+    }
+
+    button {
+      background-color: #ff0066;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #cc3366;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px 0;
+      background-color: #ffeef4;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #cc3366;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ff0066;
+    }
+
+    .social-icons i {
+      font-size: 28px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="about.html">درباره ما</a></li>
+        <li><a href="services.html">خدمات</a></li>
+        <li><a href="blog.html">وبلاگ</a></li>
+        <li><a href="portfolio.html">نمونه‌کارها</a></li>
+        <li><a href="contact.html" class="active">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h1>تماس با ZiziWeb</h1>
+<form action="https://formsubmit.co/ai.g5.ghaseemiaigin@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="نام شما" required>
+  <input type="email" name="email" placeholder="ایمیل شما" required>
+  <input type="text" name="mobile" placeholder="شماره موبایل" required>
+  <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+  <button type="submit">ارسال پیام</button>
+
+  <!-- تنظیمات فرم‌سابمیت -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+</form>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://t.me/aigin07" target="_blank" title="تلگرام">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://instagram.com/aigin.952" target="_blank" title="اینستاگرام">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/Aigin-dev" target="_blank" title="گیت‌هاب">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
